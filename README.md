@@ -14,21 +14,28 @@ Rename the project in root *CMakeLists.txt*
 
 Prepare Git LFS and dependencies before starting development
 
-### Windows
+```
+# Setup git lfs for binary files
+git lfs install
+git lfs pull --exclude=""
 
-Run `prepare.bat`
-
-### MacOS
-
-Run `sh prepare.sh` in Terminal
+# Setup submodules
+git submodule init
+git submodule update --remote
+```
 
 ## build
 
-### Windows
+To build the executable run the following commands:
 
-Run `build_script.bat`
+```
+cmake -S ./ -B ./build
+cd ./build
+make
+```
 
-### MacOS
+### XCode
 
-Run `sh build_script.sh` in Terminal
+To build XCode project run
 
+`cmake -S ./ -B ./build -GXcode`
