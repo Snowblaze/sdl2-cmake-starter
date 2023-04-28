@@ -39,3 +39,6 @@ make
 To build XCode project run
 
 `cmake -S ./ -B ./build -GXcode`
+
+## license
+[MIT](https://github.com/Snowblaze/sdl2-cmake-starter/blob/main/LICENSE)
